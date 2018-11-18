@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
 
 <html>
 <head>
+    <!--<link rel="stylesheet" href="styles/style.css?version=14" />-->
     <style>
         .btn {
             background-color: DodgerBlue;
@@ -19,8 +20,20 @@
             background-color: RoyalBlue;
         }
 
+        .header{width:100%;
+        }
+
+        .header img{ width: 20%; //or whatever width you like to have
+
+        }
+
+        .header h1{
+
+        display:inline; //It will take rest of space which left by logo.
+        }
+
         html {
-            font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+                font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
             margin-left: auto;
             margin-right: auto;
             text-align: center;
@@ -39,7 +52,7 @@
         }
 
         div {
-            background: white url("/media/notes.jpg") no-repeat;
+            background: white <!--url("/media/notes.jpg") no-repeat; -->
             color: white;
             background-size: cover;
             height: 90%;
@@ -56,28 +69,59 @@
             size: 30pt;
         }
     </style>
+</head>
 <body>
-<h1>Diginote</h1>
-{% block body-content %}
-    <div>
-    <h2><b>Scan your notes to a digital format!</b></h2>
-    <p> Upload a .jpg file to get started</p>
-{% endblock %}
-<form action="{% url "list" %}" method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    <p>{{ form.non_field_errors }}</p>
+<!--<h1>-->
+    <!--<p>-->
+        <!--Diginote-->
+    <!--</p></h1>-->
+<!--{% block body-content %}-->
+    <!--<div>-->
+    <!--<h2><b>Scan your notes to a digital format!</b></h2>-->
+    <!--<p> Upload a .jpg file to get started</p>-->
+<!--{% endblock %}-->
 
-    <p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
+<!--</div>-->
 
-    <p>
-        {{ form.docfile.errors }}
-        {{ form.docfile }}
+<div class="container main-container Site-content">
+        <h1 class="main-h1">Digitext</h1>
+        <h5>Online conversion of handwritten notes to text</h5>
+        <!--<div style="font-family:ProximaNova;font-style: italic;font-size: 15px;text-align:center;margin-bottom:10px;">By uploading your photo you confirm that you accept the <a target="_blank" href='tou.html'>Terms of Use.</a></div>-->
+        <div class="container content">
+            <div class="row">
+                <div id="drop-area" class="drop-area">
+                    <div class="inner-content">
+                        <form action="{% url "list" %}" method="post" enctype="multipart/form-data" accept=".jpg">
+                            {% csrf_token %}
+                            <p>{{ form.non_field_errors }}</p>
 
-    </p>
+                            <p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
 
-    <button class="btn"><i class="fa fa-upload"></i> Upload</button>
+                            <p>
+                                {{ form.docfile.errors }}
+                                {{ form.docfile }}
 
-</form>
-</div>
+                            </p>
+
+                            <button class="btn"><i class="fa fa-upload"></i> Upload</button>
+
+                        </form>
+                        <h5><label for="file" class="label-picker">Choose .jpg(s) </label> or Drop Them Here</h5>
+                        <!--<h6>UP TO 50 PHOTOS</h6>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container content no-padding">
+            <table class="table table-responsive">
+
+            </table>
+        </div>
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+        </div>
+    </footer>
 </body>
 </html>

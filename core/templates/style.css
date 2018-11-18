@@ -1,0 +1,412 @@
+body { 
+    background: url(/media/notes.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  body.tou{
+    background: none!important;
+    list-style-type: none;
+  }
+  .tou h1{
+      font-size:1.5rem;
+      text-align: left;
+  }
+  .tou h2{
+    font-size:1.3rem;
+}
+.tou span{
+    font-size:1.2rem;
+    font-weight: normal;
+}
+.tou{
+    margin:0;
+    padding:0;
+}
+.tou ol,.tou ul, .tou li{
+    justify-content: left;
+    text-align: left;
+    margin:0!important;
+    padding:0!important;
+}
+body.body.tou ol{
+    list-style-type: none;
+}
+
+
+
+/* 
+  html,body{
+      height:100%;
+  } */
+.main-h1{
+    margin-top:5%;
+}
+  h1{
+    font-family: 'HelveticaNeue';
+  }
+
+  h5,h6{
+    font-family: 'ProximaNova';
+  }
+
+
+  h1,h5,h6{
+      text-align: center;
+  }
+  .inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inner-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  .drop-area {
+	width: 100%;
+	height: 150px;
+	background-color: #f7f8ff;
+	outline: 2px dashed #979797;
+    transition: all 0.6s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.drop-area.drag-finish{
+    background-color: #ffffff;
+    outline: 2px dashed #4a4a4a;
+}
+
+.drop-area.drag-finish h5,.drop-area.drag-finish h6{
+    color:#4a4a4a;   
+    
+}
+
+
+.drop-area h5{
+    color:#000000;
+}
+
+.drop-area h6{
+    color:#9b9b9b;
+}
+
+.drop-area.loading {
+	display: none;
+}
+
+.drag-icon {
+	width: 100%;
+	height: 80px;
+	fill: #92b0b3;
+	display: block;
+	margin-bottom: 40px;
+}
+
+
+
+
+.svg-container{
+    display:flex;
+}
+.svg-container img{
+    margin: auto;
+    margin-bottom: 5%;
+}
+
+.footer {
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+  }
+  .footer h2,h6{
+      font-family: 'HelveticaNeue';
+  }
+
+  .footer h6{
+    color:#9b9b9b;
+  }
+
+.is-dragover{
+	background-color:gray;
+}
+
+table.is-visible{
+    display: table;
+}
+table{
+    display:none;
+    margin-top: 5%;
+    border-radius: 10px;
+    background-color: #f7f8ff;
+    border: solid 1px #979797;
+}
+.inputfile{
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.label-picker {
+    cursor: pointer;
+    font-weight: bold;
+}
+.no-padding{
+    padding:0;
+}
+td{
+    text-align:center;
+}
+
+
+table.table td{
+    background-color: #ffffff;
+    border-top: solid 1px #979797;
+    border-bottom: solid 1px #979797;
+}
+
+tr td:first-child{
+    border-top-left-radius: 10px;
+    border: solid 1px #979797;
+    border-right: none;
+}
+
+tr td:last-child{
+    border-top-right-radius: 10px;
+    border: solid 1px #979797;
+    border-left: none;
+}
+
+tr td:first-child{
+    border-bottom-left-radius: 10px;
+    border: solid 1px #979797;
+    border-right: none;
+}
+
+tr td:last-child{
+    border-bottom-right-radius: 10px;
+    border: solid 1px #979797;
+    border-left: none;
+}
+
+
+table.table { 
+    border-collapse: separate; 
+    border-spacing: 0rem 1rem;;
+    padding-top: 3%;
+    padding-bottom: 10%;
+    padding-left:3%;
+    padding-right:3%;
+    background-color: #f7f8ff;
+}
+
+.w-15{
+    width: 15%;
+}
+.w-20{
+    width: 20%;
+}
+
+.w-30{
+    width: 30%;
+}
+
+.main-container{
+    position: relative;
+    display: block;
+    /* overflow: auto; */
+    height: auto;
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    min-height: 95vh;
+    flex-direction: column;
+    font-family: 'ProximaNova';
+  }
+  
+  .Site-content {
+    flex: 1 1 auto;
+  }
+
+  .progress{
+    font-size: 1rem;
+    background-color:#9b9b9b;
+  }
+
+  .progress-bar {
+    height: 1.5rem;
+    line-height: 1.5rem;
+    background-color:#7ed321;
+  }
+
+.filename {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  }
+.body{
+    width:80%;
+    margin:0 auto;
+    margin-top:3%;
+    padding-bottom:5%;
+    line-height: 1.5rem;    
+    font-family: 'ProximaNova';
+}
+.qa h4{
+    font-family: 'ProximaNova-Bold';
+}
+.bg-danger{
+    background-color: #e2b1b7!important;
+}
+.center{
+    
+    }
+.hidden{
+        display:none;
+}
+
+.table thead tr td{
+    border: none;
+    background: transparent;
+}
+
+.zip-download-btn{
+    width: 90%;   
+    height:5rem;
+    border:0px;
+    color: white!important;
+    text-decoration: none!important;
+    font-size:1.3rem;
+    display: block;
+    border-radius:10px;
+    margin-left:30%;
+}
+
+#downloadAllBtn{
+text-decoration-line: none;
+}
+#downloadAllBtn.enabled{
+    background-color:#9012fe;
+    cursor: pointer;
+}
+#downloadAllBtn.disabled{
+    background-color:lightgray;
+    
+}
+
+#downloadAllBtn.enabled:hover{
+    background-color:#bd0fe1;
+}
+
+table thead tr td a img{
+
+    margin-bottom: 7%;
+    margin-left: 2%;
+    padding-top: 7%;
+}
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
+
+#waitSvg {
+    width: 24px;
+    height: 24px;  
+    -webkit-animation-duration: 1500ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-duration: 1500ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-duration: 1500ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    animation-duration: 1500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#waitSvg.spinner{
+    animation-name: spin;
+    -webkit-animation-name: spin;
+    -moz-animation-name: spin;
+    -ms-animation-name: spin;
+}
+@-ms-keyframes spin {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+#downloadAllBtn{
+    position: relative;
+    padding-top: 20px;
+    height:100px;
+    width:400px;
+    background-color:lightgray;
+    margin: auto;
+    color:white;
+    height: 5rem;
+    font-size: 1.3rem;
+    border-radius: 10px;
+}
+
+  #downloadAllBtn img{
+    position: absolute;
+    top:0px;
+    right: 30px;
+}
+
+#waitSvgDiv{
+    display:inline-block;
+    top:20px;
+    right:20px;
+    top: 27px;
+    right: 34px;
+    position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
