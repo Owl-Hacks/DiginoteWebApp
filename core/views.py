@@ -1,3 +1,5 @@
+import sys
+sys.path.append("../../")
 from datetime import date, datetime
 import time
 from django.core.files.storage import FileSystemStorage
@@ -11,16 +13,22 @@ from django.urls import reverse
 from threading import Thread
 from .models import Document
 from .forms import DocumentForm
-import os
+from HandwrittenTextRecognition_MXNet import demo
 
 filepath = ""
 
 
 def doStuff(file):
-    #text = predict(file)
-    print(os.getcwd())
+    text = demo.finalfunc(file, "HandwrittenTextRecognition_MXNet")
     time.sleep(2)
-    with open(file) as f:
+    f_name = file.split(".")[0]
+    f_name+=".txt"
+    f_name = f_name.split("/")[-1]
+    f_name="/home/jrmo/Downloads/"+f_name
+    with open(f_name, "w+") as out:
+        for line in text:
+            out.write(line)
+    with open(f_name, "r") as f:
         response = HttpResponse(f.read())
         return response
 
