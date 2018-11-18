@@ -1,4 +1,5 @@
 .idea/
 .iml
 .ipr
-
+*.pyc
+media/documents
