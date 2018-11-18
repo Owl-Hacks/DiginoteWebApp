@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+
+
+<html>
+    <head>
+        <style>
+            html {
+                font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+                margin-left: auto;
+                margin-right: auto;
+                text-align:center;
+                background: powderblue;
+            }
+            html, body { height: 100%; display: block}
+            h1 {
+
+                height: 10%;
+                display: block;
+            }
+            div {
+                background: white url("/media/notes.jpg") no-repeat;
+                color: white;
+                background-size:cover;
+                height: 90%;
+                width: 100%;
+                margin: 0;
+                display: block;
+                    }
+            h2 {
+                size: 40pt;
+            }
+            p{
+                size: 30pt;
+            }
+        </style>
+    <body>
+        <h1>Diginote</h1>
+        {% block body-content %}
+        <div>
+        <h2><b>Scan your notes to a digital format!</b></h2>
+            <p> Upload a .jpg file to get started</p>
+        {% endblock %}
+            <form action="{% url "list" %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <p>{{ form.non_field_errors }}</p>
+
+                <p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
+
+                <p>
+                    {{ form.docfile.errors }}
+                    {{ form.docfile }}
+                </p>
+
+                <p><input type="submit" value="Upload"/></p>
+            </form>
+         </div>
+    </body>
+</html>
